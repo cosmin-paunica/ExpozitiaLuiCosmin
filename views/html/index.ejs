@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ro">
+	<head>
+		<title>Expozitia lui Cosmin</title>
+		<meta name="description" content="Expozitie de peisaje fotografiate in Romania" />
+		<meta name="keywords" content="fotografie, expozitie, peisaje" />
+		<%- include("../fragmente/meta"); %>
+
+		<script src="js/ravase.js"></script>
+	</head>
+
+	<body>
+		<div class="sectiune-principala">
+			
+			<%- include("../fragmente/header"); %>
+			
+			<main>
+				<% if (locals.error) { %>
+					<p class="error"><%= locals.error %></p>
+				<% } %>
+
+				<div class='div-random'>
+					<h2>Vezi ce noroc îți aduc răvașele!</h2>
+					<p id="random"></p>
+				</div>
+
+				<div class="coloane">
+					<div>
+						<a href="/toate-pozele.ejs">
+							<img src="imagini/index/img-munte-text.jpg" alt="Munte" />
+						</a>
+					</div>
+					<div>
+						<a href="/despre-mine.ejs">
+							<img src="imagini/index/img-despre-mine-text.jpg" alt="Despre autor" />
+						</a>
+					</div>
+					<div>
+						<% if (!locals.username) { %>
+							<a href="/login.ejs">
+								<img src="imagini/index/img-login-text.jpg" alt="Login" />
+							</a>
+						<% } else { %>
+							<a href="/pozele-mele.ejs">
+								<img src="imagini/index/img-pozele-tale-text.jpg" alt="Pozele tale" />
+							</a>
+						<% } %>
+					</div>
+				</div>
+			</main>
+			
+			<%- include("../fragmente/footer"); %>
+			
+		</div>
+	</body>
+</html>

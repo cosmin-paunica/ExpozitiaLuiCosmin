@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ro">
+	<head>
+		<title>Toate pozele</title>
+		<meta name="description" content="Toată colecția de poze" />
+		<meta name="keywords" content="fotografie, expozitie, foto, bucuresti, sibiu, bucegi" />
+		<%- include("../fragmente/meta"); %>
+		<link rel="stylesheet" type="text/css" href="css/toate-pozele.css" />
+
+        <script src="js/ejs.min.js"></script>
+        <script src="js/script.js"></script>
+	</head>
+
+	<body>
+		<div class="sectiune-principala">
+			
+			<%- include("../fragmente/header") %>
+			
+			<main class="despre-mine">
+				<div id="noutati">
+					<h2>Noutăți:</h2>
+					<p id="noutate"></p>
+				</div>
+				<div id="apl">
+					<p id="par-sortare">Sortați după:</p>
+					<input type="radio" id="sort-locatie" name="sortare" value="locatie" />
+					<label for="sort-locatie">Locație</label><br />
+					<input type="radio" id="sort-data" name="sortare" value="data" />
+					<label for="sort-data">Dată</label><br />
+					<p id="par-filtrare-locatie">Afișați pozele din locațiile:</p>
+					<p id="max-locatie">Cea mai frecventă locație este </p>
+					<p id="max-an">Cel mai frecvent an este </p>
+				</div>
+                <div id="poze"></div>
+                
+			</main>
+			
+			<%- include("../fragmente/footer") %>
+			
+		</div>
+	</body>
+</html>

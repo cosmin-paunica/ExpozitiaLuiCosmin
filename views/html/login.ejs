@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ro">
+	<head>
+		<title>Login</title>
+		<meta name="description" content="Expozitie de peisaje fotografiate in Romania" />
+		<meta name="keywords" content="fotografie, expozitie, peisaje" />
+		<%- include("../fragmente/meta"); %>
+	</head>
+
+	<body>
+		<div class="sectiune-principala">
+			
+			<%- include("../fragmente/header") %>
+			
+			<main>
+				<% if (locals.error) { %>
+					<p class="error"><%= locals.error %></p>
+				<% } %>
+
+				<form method="post" action="/login">
+					<label>
+						Username: <input type="text" name="username" />
+					</label>
+					<br />
+					<label>
+						Parola: <input type="password" name="parola" />
+					</label>
+					<br />
+					<input type="submit" value="Login" />
+				</form> 
+			</main>
+			
+			<%- include("../fragmente/footer") %>
+			
+		</div>
+	</body>
+</html>

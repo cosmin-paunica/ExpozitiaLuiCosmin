@@ -1,0 +1,40 @@
+<header>
+    <h1>Expoziția de fotografie a lui Cosmin</h1>
+    
+    <nav>
+        <ul class="meniu">
+            <li><a href="/index.ejs">Acasă</a></li>
+            <!-- <li>
+                <div>Colecții</div>
+                <ul class="submeniu">
+                    <li><a href="/bucuresti.ejs">București</a></li>
+                    <li><a href="/alte-orase.ejs">Alte orașe</a></li>
+                    <li><a href="/munte.ejs">Munte</a></li>
+                    <li><a href="/toate-pozele.ejs">Toate pozele</a></li>
+                </ul>
+            </li> -->
+            <li><a href="/toate-pozele.ejs">Toate pozele</a></li>
+            <li><a href="/despre-mine.ejs">Despre mine</a></li>
+            <li>
+            <% if (!locals.username) { %>
+                <div>Profil</div>
+                <ul class="submeniu">
+                    <li><a href="/login.ejs">Login</a></li>
+                    <li><a href="/inregistrare.ejs">Înregistrare</a></li>
+                </ul>
+            <% } else { %>
+                <div><%= locals.prenume + " " + locals.nume %></div>
+                <ul class="submeniu">
+                    <li><a href="/pozele-tale.ejs">Pozele tale</a></li>
+                    <li>
+                        <form method='get' action='/logout'>
+                            <input type="submit" value="Logout"/>
+                        </form>
+                    </li>
+                </ul>
+            <% } %>
+            </li>
+        </ul>
+    </nav>
+</header>
+<script src="js/marcare_pagina_activa.js"></script>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ro">
+	<head>
+		<title>Înregistrare</title>
+		<meta name="description" content="Expozitie de peisaje fotografiate in Romania" />
+		<meta name="keywords" content="fotografie, expozitie, peisaje" />
+		<%- include("../fragmente/meta"); %>
+	</head>
+
+	<body>
+		<div class="sectiune-principala">
+			
+			<%- include("../fragmente/header") %>
+			
+			<main>
+				<% if (locals.error) { %>
+					<p class="error"><%= locals.error %></p>
+				<% } %>
+				
+				<form method="post" action="/inregistrare">
+					<p>
+						<label>
+							Username: <input type="text" name="username" />
+						</label>
+					</p>
+					<p>
+						<label>
+							Prenume: <input type="text" name="prenume" />
+						</label>
+					</p>
+					<p>
+						<label>
+							Nume: <input type="text" name="nume" />
+						</label>
+					</p>
+					<p>
+						<label>
+							Email: <input type="text" name="email" />
+						</label>
+					</p>
+					<p>
+						<label>
+							Parolă: <input type="password" name="parola" />
+						</label>
+					</p>
+					<p>
+						<label>
+							Reintroduceți parola: <input type="password" name="rparola" />
+						</label>
+					</p>
+					<p>
+						<label>
+							Aveți experiență în fotografie: <input type="checkbox" name="experienta" />
+						</label>
+					</p>
+					<p>
+						<input type="submit" value="Înregistrare" />
+					</p>
+				</form>
+			</main>
+			
+			<%- include("../fragmente/footer") %>
+			
+		</div>
+	</body>
+</html>

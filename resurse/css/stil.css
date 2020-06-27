@@ -1,0 +1,236 @@
+* {
+	margin:0px;
+	padding:0px;
+	text-indent:0px;
+	box-sizing: border-box;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+body {
+	background-image: url(../imagini/background.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100%;
+	margin: 0px;
+	font-family: arial;
+}
+
+div.sectiune-principala {
+	margin: auto;
+	width: 75%;
+	padding: 10px;
+	background-color: rgb(223, 223, 223);
+}
+
+header {
+	width: 100%;
+	height: 131px;
+	background: rgb(79, 91, 110);
+	color: white;
+	text-align: center;
+}
+
+header>h1 {
+	margin-top: 0;
+	padding-top: 25px;
+	width: 100%;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	margin: 0px 0px 20px 0px;
+}
+
+
+nav {
+	width: 100%;
+	color: black;
+}
+
+ul.meniu li {
+	display: block;
+	font-weight: bold;
+	height: 50px;
+	line-height:50px;
+	text-align: center;
+	list-style-type: none;
+	overflow: hidden;
+}
+
+ul.meniu>li {
+	float: left;
+	width: 25%;
+	border-right: 2px solid rgb(223, 223, 223);
+}
+
+ul.submeniu>li{
+	width:100%;
+}
+
+ul.meniu>li:last-child {
+	border-right: none;
+}
+
+ul.meniu>li>a, ul.meniu>li>div, ul.submeniu>li>a, ul.submeniu>li>form>input {
+	display: block;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	text-decoration: none;
+	color: white;
+	transition: background 0.2s linear, border 0.2s linear;
+}
+
+ul.submeniu>li>form>input {
+	height: 50px;
+	border: none;
+	font-weight: bold;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+ul.meniu>li>ul.submeniu {
+	position: relative;
+	top: 0px;
+}
+
+ul.meniu>li>a:hover, ul.submeniu>li>a:hover, ul.submeniu>li>form>input:hover {
+	background: rgb(11, 65, 153);
+	border: 2px solid orange;
+	outline: none;
+}
+
+ul.meniu>li:hover {
+	overflow: visible;
+	transition: background 2s linear;
+}
+
+.pagina-curenta {
+	background-color: rgb(173, 14, 14)!important;
+}
+
+.pagina-curenta:hover {
+	background-color: rgb(11, 65, 153)!important;
+}
+
+.div-random {
+	border: 2px solid black;
+	background-color: royalblue;
+	margin-bottom: 10px;
+	padding: 20px;
+}
+
+.div-random>h2 {
+	margin-top: 0px!important;
+}
+
+.div-random>p {
+	background-color: orange;
+	padding: 5px;
+	font-style: italic;
+}
+
+p.error {
+	color: white;
+	background: red;
+	font-weight: bold;
+	width: 100%;
+	padding: 5px;
+	margin-bottom: 20px;
+}
+
+main {
+	padding: 40px 20px 40px 20px;
+}
+
+div.coloane {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.coloane>div {
+	width: 50%;
+	min-width: 250px;
+	padding: 0.5%;
+	flex-basis: 33.33%;
+	flex-grow: 1;
+	transition: transform 0.5s;
+}
+
+.coloane>div:hover {
+	transform: scale(1.1);
+}
+
+main h1 {
+	margin: 0px 0px 20px 40px;
+	text-decoration: underline;
+}
+
+main h2 {
+	margin: 20px 0px 20px 0px;
+}
+
+section.sectiune-despre-mine-1 p {
+	line-height: 1.4;
+	text-indent: 4%;
+}
+
+section.sectiune-despre-mine-1 h3 {
+	margin: 10px 0px 10px 0px;
+}
+
+main ul {
+	margin: 10px 20px;
+}
+
+#cuprins1 {
+	margin-bottom: 20px;
+}
+
+.cuprins2 {
+	margin: 0px 20px;
+}
+
+.hide-this {
+	display: none;
+}
+
+footer {
+	padding: 15px;
+	background: rgb(79, 91, 110);
+	color: rgb(255, 255, 255);
+	text-align: center;
+}
+
+@media screen and (max-width:766px) {
+	div.sectiune-principala {
+		width: 100%;
+	}
+	
+	figure>* {
+		width: 100%;
+	}
+	
+	header {
+		height: 281px;
+	}
+	
+	ul.meniu>li, ul.submeniu>li {
+		width: 100%;
+		border-right: none;
+		border-bottom: 2px solid rgb(223, 223, 223);
+	}
+	
+	ul.meniu>li:last-child, ul.submeniu>li:last-child {
+		border-bottom: none;
+	}
+}
+
+@media screen and (max-width: 578px) {
+	header {
+		height: 317px;
+	}
+}
